@@ -5,8 +5,11 @@ body {
     
     text-align: center;
 
-    background-color: black;
+    background-image: linear-gradient(60deg, #0e041f, #010325, #0d2346);
     color: #78b2f5;
+
+    padding: 0;
+    margin: 0;
 }
 
 h1, h2, h3 {
@@ -19,13 +22,4 @@ span {
 
 .hidden {
     display: none;
-}
-
-
-
-.content {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
 }
