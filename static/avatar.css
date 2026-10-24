@@ -14,7 +14,7 @@
 
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid rgb(120, 178, 245);
+    border: 3px solid #78b2f5;
 }
 
 .avatar-container > img {
