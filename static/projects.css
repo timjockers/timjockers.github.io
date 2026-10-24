@@ -1,0 +1,30 @@
+.projects {
+    width: min(1100px, calc(100% - 32px));
+    margin: 3rem auto;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    gap: 1.25rem;
+}
+
+.project-card {
+    box-sizing: border-box;
+    min-width: 0;
+    padding: 1.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 4px 14px rgb(15 23 42 / 6%);
+}
+
+.project-card h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.25rem;
+}
+
+.project-card p {
+    margin: 0;
+    line-height: 1.6;
+}
