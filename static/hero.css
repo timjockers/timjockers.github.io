@@ -45,7 +45,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 150px;
+    gap: 25px;
     height: 35px;
 }
 .hero-links > a {
