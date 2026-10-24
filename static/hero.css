@@ -53,18 +53,67 @@
 }
 .hero-links {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 25px;
-    height: 35px;
+    flex-wrap: wrap;
+    gap: 0.75rem;
 }
-.hero-links > a {
-    height: 100%;
-    aspect-ratio: 1/1;
+.hero-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    min-height: 44px;
+    padding: 0 1rem;
+    border: 1px solid rgb(120 178 245 / 35%);
+    border-radius: 999px;
+    background: rgb(19 26 48 / 45%);
+    color: #78b2f5;
+    text-decoration: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease, gap 0.25s ease;
 }
-.hero-links > a > svg {
-    fill: #78b2f5;
+.hero-link:hover {
+    gap: 0.55rem;
+    border-color: currentColor;
+    background: rgb(120 178 245 / 14%);
+}
+.hero-link:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}
+.hero-link svg {
+    flex: 0 0 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: currentColor;
+}
+.link-label {
+    max-width: 0;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    white-space: nowrap;
+    transition: max-width 0.25s ease, opacity 0.2s ease, visibility 0s linear 0.25s;
+}
+.hero-link:hover .link-label,
+.hero-link:focus-visible .link-label {
+    max-width: 5rem;
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+}
+@media (hover: none) {
+    .link-label {
+        max-width: 5rem;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .hero-link,
+    .link-label {
+        transition: none;
+    }
 }
 
 .background-video {
