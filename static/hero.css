@@ -1,11 +1,10 @@
-.fixed-hero-background {
-    position: fixed;
-    top: 0;
-    left: 0;
+.hero-background {
+    position: relative;
     width: 100vw;
     height: 100vh;
-    z-index: 0;
     overflow: hidden;
+
+    margin: 0;
 }
 
 .video-overlay {
@@ -16,6 +15,30 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(2px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.hero-avatar {
+    max-width: 50vw;
+    max-height: 50vh;
+    aspect-ratio: 1/1;
+
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #78b2f5;
+}
+.hero-avatar > img {
+    width: 100%;
+    height: 100%;
+}
+.hero-name {
+    font-size: 3rem;
+    font-weight: 80;
 }
 
 .background-video {
