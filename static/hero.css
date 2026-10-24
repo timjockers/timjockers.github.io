@@ -5,6 +5,17 @@
     overflow: hidden;
 
     margin: 0;
+
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        #000 calc(100% - clamp(3rem, 8vh, 6rem)),
+        transparent 100%
+    );
+    mask-image: linear-gradient(
+        to bottom,
+        #000 calc(100% - clamp(3rem, 8vh, 6rem)),
+        transparent 100%
+    );
 }
 
 .video-overlay {
