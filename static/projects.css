@@ -57,6 +57,23 @@
     transform: scale(1.04);
 }
 
+.project-card--with-background .year {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2;
+    padding: 0.35rem 0.7rem;
+    border: 1px solid rgb(255 255 255 / 35%);
+    border-radius: 999px;
+    background: rgb(19 26 48 / 75%);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 650;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    backdrop-filter: blur(8px);
+}
+
 .project-card--with-background h2,
 .project-card--with-background p {
     position: relative;
