@@ -57,6 +57,23 @@
     transform: scale(1.04);
 }
 
+.project-card--with-background .card-logo {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 2;
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 0.35rem;
+    border-radius: 10px;
+    background: rgb(255 255 255 / 92%);
+    object-fit: contain;
+}
+
+.project-card--with-background .card-logo:not([src]) {
+    display: none;
+}
+
 .project-card--with-background .year {
     position: absolute;
     top: 1rem;
