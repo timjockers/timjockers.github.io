@@ -6,7 +6,7 @@
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
-    gap: 1.25rem;
+    gap: 1.5rem;
 }
 
 .project-card {
