@@ -1,0 +1,120 @@
+.project-page {
+    width: min(1100px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 2rem 0 4rem;
+    text-align: left;
+}
+
+.home-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin-bottom: 1.5rem;
+    padding: 0.65rem 1rem;
+    border: 1px solid rgb(120 178 245 / 45%);
+    border-radius: 999px;
+    background: rgb(19 26 48 / 55%);
+    color: #d6e8ff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.home-button:hover {
+    border-color: #78b2f5;
+    background: rgb(120 178 245 / 16%);
+}
+
+.home-button:focus-visible {
+    outline: 3px solid #78b2f5;
+    outline-offset: 4px;
+}
+
+.project-hero {
+    position: relative;
+    display: flex;
+    min-height: 420px;
+    align-items: flex-end;
+    overflow: hidden;
+    border: 1px solid rgb(255 255 255 / 18%);
+    border-radius: 20px;
+    background: #131a30;
+    box-shadow: 0 18px 50px rgb(0 0 0 / 24%);
+}
+
+.project-hero::after {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgb(10 15 30 / 78%) 0%,
+        rgb(10 15 30 / 64%) 35%,
+        rgb(10 15 30 / 42%) 70%,
+        rgb(10 15 30 / 24%) 100%
+    );
+    content: "";
+}
+
+.project-hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 45%;
+}
+
+.project-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 680px;
+    padding: clamp(1.5rem, 6vw, 4rem);
+}
+
+.project-category {
+    margin: 0 0 0.75rem;
+    color: #b9d8ff;
+    font-size: 0.9rem;
+    font-weight: 650;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.project-hero h1 {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(2.25rem, 7vw, 4.5rem);
+    line-height: 1.08;
+    text-wrap: balance;
+}
+
+@media (max-width: 600px) {
+    .project-page {
+        padding-top: 1.25rem;
+    }
+
+    .project-hero {
+        min-height: 340px;
+        border-radius: 14px;
+    }
+
+    .project-hero::after {
+        background: linear-gradient(
+            0deg,
+            rgb(10 15 30 / 78%) 0%,
+            rgb(10 15 30 / 58%) 40%,
+            rgb(10 15 30 / 32%) 75%,
+            rgb(10 15 30 / 20%) 100%
+        );
+    }
+
+    .project-hero-image {
+        object-position: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .home-button {
+        transition: none;
+    }
+}
