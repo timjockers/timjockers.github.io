@@ -64,6 +64,19 @@
     object-position: center 45%;
 }
 
+.project-partner-logo {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 2;
+    box-sizing: border-box;
+    width: min(190px, 38%);
+    padding: 0.8rem 1rem;
+    border-radius: 12px;
+    background: rgb(255 255 255 / 94%);
+    box-shadow: 0 6px 20px rgb(0 0 0 / 18%);
+}
+
 .project-hero-content {
     position: relative;
     z-index: 1;
@@ -128,6 +141,14 @@
 
     .project-hero-image {
         object-position: center;
+    }
+
+    .project-partner-logo {
+        top: 1rem;
+        right: 1rem;
+        width: min(150px, 42%);
+        padding: 0.65rem 0.8rem;
+        border-radius: 10px;
     }
 
     .project-description {
