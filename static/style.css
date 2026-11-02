@@ -27,19 +27,60 @@ span {
 
 .language-switcher {
     position: fixed;
-    top: 1rem;
-    right: 1rem;
+    top: 0.75rem;
+    right: 0.75rem;
     z-index: 10;
     display: flex;
-    gap: 0.35rem;
-    padding: 0.3rem;
-    border: 1px solid rgb(120 178 245 / 35%);
+    gap: 0.15rem;
+    padding: 0.15rem;
+    border: 1px solid rgb(120 178 245 / 20%);
     border-radius: 999px;
-    background: rgb(19 26 48 / 88%);
+    background: rgb(19 26 48 / 65%);
     backdrop-filter: blur(8px);
 }
 
-.language-switcher a,
+.language-switcher a {
+    position: relative;
+    display: inline-flex;
+    min-height: 1.8rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.55rem;
+    border-radius: 999px;
+    color: #b9c9df;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.language-switcher a[aria-current="page"] {
+    background: rgb(120 178 245 / 12%);
+    color: #d6e8ff;
+}
+
+.language-switcher a[aria-current="page"]::after {
+    position: absolute;
+    top: calc(100% + 0.45rem);
+    right: 0;
+    width: max-content;
+    padding: 0.3rem 0.55rem;
+    border: 1px solid rgb(120 178 245 / 20%);
+    border-radius: 0.4rem;
+    background: rgb(19 26 48 / 92%);
+    color: #d6e8ff;
+    content: attr(data-translation-note);
+    font-size: 0.75rem;
+    font-weight: 500;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+}
+
+.language-switcher a[aria-current="page"]:hover::after,
+.language-switcher a[aria-current="page"]:focus-visible::after {
+    opacity: 1;
+}
+
 .language-entry-options a {
     display: inline-flex;
     min-height: 2.5rem;
@@ -52,8 +93,7 @@ span {
     text-decoration: none;
 }
 
-.language-switcher a[aria-current="page"],
-.language-switcher a:hover,
+.language-entry-options a:hover,
 .language-entry-options a {
     background: rgb(120 178 245 / 18%);
 }
@@ -62,6 +102,12 @@ span {
 .language-entry-options a:focus-visible {
     outline: 3px solid #78b2f5;
     outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .language-switcher a[aria-current="page"]::after {
+        transition: none;
+    }
 }
 
 .language-entry {
