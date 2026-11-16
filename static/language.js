@@ -11,10 +11,11 @@ function getPreferredLanguage() {
     }
 }
 
-const preferredLanguage = getPreferredLanguage() ?? "en";
+const savedLanguage = getPreferredLanguage();
+const preferredLanguage = savedLanguage ?? "en";
 
-if (document.body.hasAttribute("data-language-entry")) {
-    window.location.replace(`/${preferredLanguage}/`);
+if (document.documentElement.hasAttribute("data-language-entry")) {
+    window.location.replace(`/${savedLanguage ?? "de"}/`);
 } else if (document.body.dataset.legacyPath) {
     window.location.replace(`/${preferredLanguage}${document.body.dataset.legacyPath}`);
 }
